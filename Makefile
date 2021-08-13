@@ -1,9 +1,9 @@
-VERSION?=6.2.5
+VERSION?=6.4.0
 REPO?=293385631482.dkr.ecr.eu-west-1.amazonaws.com/epimorphics/sensu
 
 all: image
 
-Dockerfile:
+Dockerfile: ${MAKEFILE}
 	echo "FROM sensu/sensu:${VERSION}" > $@
 	echo "RUN apk add py3-pip" >> $@
 	
