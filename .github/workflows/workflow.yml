@@ -10,7 +10,7 @@ jobs:
     name: Publish Image
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: |
           git fetch --prune --unshallow --tags
       - name: Configure AWS Credentials
@@ -21,6 +21,6 @@ jobs:
           aws-region: eu-west-1
       - name: Login to Amazon ECR
         id: login-ecr
-        uses: aws-actions/amazon-ecr-login@v1
+        uses: aws-actions/amazon-ecr-login@v1-node16
       - name: publish image
         run: make image publish
