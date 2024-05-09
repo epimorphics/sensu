@@ -1,4 +1,4 @@
-VERSION?=6.9.0
+VERSION?=6.11.0
 REPO?=293385631482.dkr.ecr.eu-west-1.amazonaws.com/epimorphics/sensu
 
 all: image
